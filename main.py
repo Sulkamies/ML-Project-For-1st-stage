@@ -11,9 +11,10 @@ X_train_compressed, X_test_compressed, y_train, y_test, pca = trainTestSplit(X_r
 # Transform the compressed data back to the 784-dimensional feature space
 X_inverse = inverse_pca(X_train_compressed, pca) 
 
-# Visualize a given datapoint that has been transformed to the principal subspace and then transformed back to feature subspace; visualization for data lost in the tansformation
-retainer(X_inverse[0, :], y[0], 0)
-retainer(X_inverse[1, :], y[1], 1)
+# Visualize a given datapoint that has been transformed to the principal subspace and then transformed back to feature subspace; visualization for information lost in the tansformation
+retainer(X_inverse[0, :], y_train[0])
+retainer(X_inverse[5, :], y_train[5])
+retainer(X_inverse[6, :], y_train[6])
 
 
 # For testing
