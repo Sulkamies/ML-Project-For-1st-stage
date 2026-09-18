@@ -8,5 +8,5 @@ def pca_transformation(X_train_raw, X_test_raw, n) :
 
     return X_train_compressed, X_test_compressed, pca
 
-# returns the 
+# returns the reconstructed data point in the 784-dimensional space
 def inverse_pca(X_compressed, pca) : return pca.inverse_transform(X_compressed)
